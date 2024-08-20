@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function(){
     var tombolInput = document.getElementById('input-list');
     var kontainerToDo = document.getElementById('list-undone-container');
@@ -5,9 +6,12 @@ document.addEventListener('DOMContentLoaded', function(){
     var listUndone = document.getElementById('list-undone');
     var listDone = document.getElementById('list-done');
     var elemenForm = document.querySelector('body main form');
+    const SAVED_EVENT = 'saved-todo';
+    const STORAGE_KEY = 'TODO_APPS';
 
     var arrayToDo = [];
     visibilitasList();
+    loadDataFromStorage();
 
         tombolInput.addEventListener('click', function(){
         var inputData = document.getElementById('inputForm').value;
@@ -39,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
             }
             transformasi();
+            simpanKeLocalStorage();
     }
 
     function generateId(){
@@ -55,16 +60,21 @@ document.addEventListener('DOMContentLoaded', function(){
 
     function hapusTodo(item){
         arrayToDo = arrayToDo.filter(itemBaru => itemBaru !== item);
+        simpanKeLocalStorage();
         renderTodo();
     }
 
     function buatTodo(inputData){
         arrayToDo.push(generateObject(generateId(), inputData, false));
+        console.log('Data Di push ke array')
+        simpanKeLocalStorage();
+        
         transformasi();
     }
 
     function selesaikanTodo(item){
         item.isDone = true;
+
         renderTodo();
     }
 
@@ -215,7 +225,37 @@ document.addEventListener('DOMContentLoaded', function(){
 }
 
 
+    function cekLocalStrorage(){
+        if(typeof(localStorage) === undefined){
+            alert('Browser kamu tidak mendukung local storage');
+            return false;
+        }
 
+        return true;
+    }
 
+    function simpanKeLocalStorage(){
+        if(cekLocalStrorage()){
+            const parsed = JSON.stringify(arrayToDo);
+            localStorage.setItem(STORAGE_KEY, parsed);
+            document.dispatchEvent(new Event(SAVED_EVENT));
+            console.log('Data Berhasil Disimpan')
+        }
+    }
+
+    document.addEventListener(SAVED_EVENT, function(){
+        console.log(localStorage.getItem(STORAGE_KEY));
+    })
+
+    function loadDataFromStorage(){
+        const serializedData = localStorage.getItem(STORAGE_KEY);
+        var data = JSON.parse(serializedData);
+        if(data != null){
+           for(const todo of data){
+            arrayToDo.push(todo);
+           }
+        }
+        renderTodo();
+    }
 })
 
