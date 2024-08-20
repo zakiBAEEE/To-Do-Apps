@@ -89,6 +89,12 @@ document.addEventListener('DOMContentLoaded', function(){
         containerList.style.paddingInline = '1rem';
         containerList.classList.add('gap-x-1.5');
 
+        // containerList.classList.add('border-2');
+        // containerList.classList.add('border-solid');
+        // containerList.classList.add('border-zinc-900');
+        // containerList.classList.add('p-1');
+        // containerList.classList.add('rounded-xl');
+
         var taskSelesai = document.createElement('p');
         taskSelesai.innerText = item.task;
 
@@ -115,10 +121,10 @@ document.addEventListener('DOMContentLoaded', function(){
         })
 
         var kontainerTombol = document.createElement('div');
-        kontainerTombol.className = 'list-tombol';
+        kontainerTombol.classList.add('list-tombol');
         kontainerTombol.classList.add('flex');
         kontainerTombol.classList.add('flex-row');
-        kontainerTombol.classList.add('gap-x-1');
+        kontainerTombol.classList.add('gap-x-2');
         kontainerTombol.append(buttonBatal, buttonHapus);
 
         containerList.append(taskSelesai, kontainerTombol);
@@ -137,7 +143,12 @@ document.addEventListener('DOMContentLoaded', function(){
         containerList.style.paddingInline = '1rem';
         containerList.classList.add('gap-x-1.5');
         containerList.style.position = 'relative';
-        containerList.classList.add('border-black');
+        // containerList.classList.add('border-2');
+        // containerList.classList.add('border-solid');
+        // containerList.classList.add('border-zinc-900');
+        // containerList.classList.add('p-1');
+        // containerList.classList.add('rounded-xl');
+
         
         var iconDone = document.createElement('img');
         iconDone.src = 'static/svg/done.svg'
