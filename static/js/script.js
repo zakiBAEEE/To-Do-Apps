@@ -12,13 +12,11 @@ document.addEventListener('DOMContentLoaded', function(){
     var arrayToDo = [];
     visibilitasList();
     loadDataFromStorage();
-
+    transformasi();
         tombolInput.addEventListener('click', function(){
         var inputData = document.getElementById('inputForm').value;
         
         hapusPlaceholder();
-
-        
 
         if(apakahKosong(inputData)){
             peringatan(inputData);
@@ -42,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function(){
                     tampilTodoSelesai(item);
                 }
             }
-            transformasi();
             simpanKeLocalStorage();
+            transformasi();
     }
 
     function generateId(){
@@ -214,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
    function transformasi(){
-      if(arrayToDo.length === 1){
+      if(arrayToDo.length >= 1){
             document.getElementById('form-input').classList.add('translate-y-52');
             document.getElementById('form-input').style.position = 'absolute';
         }
