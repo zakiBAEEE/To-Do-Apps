@@ -16,13 +16,25 @@ dikatakan aplikasi ini adalah aplikasi client side saja</p>
 </ol>
 <div style="display:flex; flex-direction:column; align-items:center; width:100%">
   <h2>Cara Menggunakan Aplikasi</h2>
-  <p>Anda hanya perlu menginputkan sesuatu (Hal yang ingin anda lakukan) kedalam form lalu mengklik tombol 'tambah'</p>
-  <img src="https://github.com/user-attachments/assets/8ac4b591-fd2c-4143-ac30-fa767a756eb3" style="width:600px"/>
-  <p>Lalu sesuatu yang anda ketik akan tampil di bagian Todo List</p>
-  <img src="https://github.com/user-attachments/assets/c0cf6a51-d653-439e-92cf-027634376f00" style="width:600px"/>
-  <p>Jika anda mengklik checklist, catatan anda akan berpindah bagian ke 'Done List'</p>
-  <img src = "https://github.com/user-attachments/assets/76c4067c-3e1c-4876-ad3f-8f14565af215" style="width:600px"/>
-  <p>Di bagian Done List terdapat dua tombol, yaitu 'back' dan 'remove'. Jika tombol back ditekan ia akan mengembalikan item todo anda ke kembali ke todo list.
-  Lalu jika tombol 'remove ditekan ia akan menghapus item todo anda'</p>
-  <img src="https://github.com/user-attachments/assets/91d286c9-8e86-4bcb-9069-af039753ead5" style="width:400px"/>
+  <ol>
+    <li>
+       <p><strong>Anda hanya perlu menginputkan sesuatu (Hal yang ingin anda lakukan) kedalam form lalu mengklik tombol 'tambah'</strong></p>
+      <img src="https://github.com/user-attachments/assets/8ac4b591-fd2c-4143-ac30-fa767a756eb3" style="width:600px"/>
+    </li>
+    <li>
+       <p><strong>Lalu sesuatu yang anda ketik akan tampil di bagian Todo List</strong></p>
+      <img src="https://github.com/user-attachments/assets/c0cf6a51-d653-439e-92cf-027634376f00" style="width:600px"/>
+    </li>
+    <li>
+      <p><strong>Jika anda mengklik checklist, catatan anda akan berpindah bagian ke 'Done List'</strong></p>
+      <img src = "https://github.com/user-attachments/assets/76c4067c-3e1c-4876-ad3f-8f14565af215" style="width:600px"/>
+    </li>
+    <li>
+      <p>Di bagian Done List terdapat dua tombol, yaitu 'back' dan 'remove'. Jika tombol back ditekan ia akan mengembalikan item todo anda ke kembali ke todo list.
+        Lalu jika tombol 'remove ditekan ia akan menghapus item todo anda'</p>
+       <img src="https://github.com/user-attachments/assets/91d286c9-8e86-4bcb-9069-af039753ead5" style="width:400px"/>
+    </li>
+  </ol>
 </div>
+<h2>Credit</h2>
+<p>Aplikasi yang saya buat ini sangat terbantu dengan learning path 'Belajar Membuat Front-End Web untuk Pemula' di platform Dicoding</p>
